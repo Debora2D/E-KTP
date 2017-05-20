@@ -1,3 +1,4 @@
+
 package tugasss;
 
 
@@ -49,3 +50,49 @@ public class TugasEKTP {
         RT8.add(new penduduk("Denis Rananda", "hindu", "laki-laki", "polisi", "O", "Subur makmur", "08", "makasar", "18-10-1998", "Indonesia"));
         RT8.add(new penduduk("Toni Tikno", "Islam", "laki-laki", "polisi", "A", "Subur makmur", "08", "tuban", "10-06-1993", "Indonesia"));
 
+
+        HashMap<String, penduduk> Sukorame = new HashMap<>();
+        Sukorame.put("Debora", RT1.get(0));
+        Sukorame.put("Royhan", RT1.get(1));
+        Sukorame.put("Valleran", RT2.get(0));
+        Sukorame.put("Albertos", RT2.get(1));
+        Sukorame.put("Jumaidah", RT3.get(0));
+        Sukorame.put("Yaani", RT3.get(1));
+        Sukorame.put("Nulman", RT4.get(0));
+        Sukorame.put("Hajar", RT4.get(1));
+        Sukorame.put("Tirta", RT5.get(0));
+        Sukorame.put("Stella", RT5.get(1));
+        Sukorame.put("Nina", RT6.get(0));
+        Sukorame.put("Valin", RT6.get(1));
+        Sukorame.put("Turin", RT7.get(0));
+        Sukorame.put("Titania", RT7.get(1));
+        Sukorame.put("Denis", RT8.get(0));
+        Sukorame.put("Toni", RT8.get(1));
+        
+        
+        Collections.sort(RT1);
+        Collections.sort(RT2);
+       Collections.sort(RT3);
+       Collections.sort(RT4);
+       Collections.sort(RT5);
+       Collections.sort(RT6);
+       Collections.sort(RT7);
+       Collections.sort(RT8);
+       
+        
+        
+        Scanner scn = new Scanner(System.in);
+        
+        System.out.print("Masukkan Nama penduduk yang hilang : ");
+        String input = scn.nextLine();
+        
+        if(Sukorame.containsKey(input)==true){
+
+             System.out.println(Sukorame.get(input).getnama()+"\t"+Sukorame.get(input).getagama()+"\t"+Sukorame.get(input).getJeniskelamin()+"\t"+Sukorame.get(input).getpekerjaan()+"\t"+Sukorame.get(input).getgoldar()+"\t"+Sukorame.get(input).getkelurahan()+"\t"+Sukorame.get(input).getRt()+"\t"+Sukorame.get(input).gettempatLahir()+"\t"+Sukorame.get(input).gettanggalLahir()+"\t"+Sukorame.get(input).getkewarganegaraan());
+        }
+        else
+            System.out.println("Data Tidak ada");
+        
+    }
+
+}
